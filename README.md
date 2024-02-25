@@ -12,23 +12,41 @@
 <h3> 📁 Conteúdo</h3>
 O repositório foi dividido em dois diretórios:
 
-<h5> 🐍 Python</h5>
+<h4> 🐍 Python</h4>
 
 
-###### 📁 Amazon Elastic Block Store - EBS;
-  - [x] Delete EBS
-  - [x] Describe EBS
-  - [x] Detach Volume EBS
-  - [x] Volume snapshot All
-  - [x] Volume instance Id
-  - [x] Volume Status
+- 📁 Amazon Elastic Block Store - EBS;
+   - [x] Delete EBS
+   - [x] Describe EBS
+   - [x] Detach Volume EBS
+   - [x] Volume snapshot All
+   - [x] Volume instance Id
+   - [x] Volume Status
 
-###### 📁  Elastic Compute Cloud - Amazon EC2; 
-- [x] Elastic Load Balancing - ELB;
-- [x] Simple Storage Service - S3
-- [ ] 
+- 📁 Elastic Compute Cloud - Amazon EC2; 
+   - [x] Create instance
+   - [x] Delete instance
+   - [x] Basic Commands
+- 📁 Elastic Load Balancing - ELB;
+  - [x] Delete LoadBalancer
+  - [x] Delete LoadBalancer V2
+- 📁 Simple Storage Service - S3
+  - [x] Delete bucket
+  - [x] List bucket
 
-<h5> 📁 Shell Script</h5>
+<h4> 🐧 Shell Script</h4>
+- 📁 CloudWatch Logs;
+   - [x] Add tags
+<!-- - 📁 Elastic Compute Cloud - Amazon EC2; 
+   - [x] Create instance
+   - [x] Delete instance
+   - [x] Basic Commands
+- 📁 Elastic Load Balancing - ELB;
+  - [x] Delete LoadBalancer
+  - [x] Delete LoadBalancer V2
+- 📁 Simple Storage Service - S3
+  - [x] Delete bucket
+  - [x] List bucket🐧 -->
 
 <h3> ☕ Usando as Lambdas Functions</h3>
 
