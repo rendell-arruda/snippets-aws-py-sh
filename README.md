@@ -26,7 +26,8 @@ O repositório foi dividido em dois diretórios:
 - 📁 Elastic Compute Cloud - Amazon EC2; 
    - [x] Create instance
    - [x] Delete instance
-   - [x] Basic Commands
+   - [x] EC2 Basic Commands
+  
 - 📁 Elastic Load Balancing - ELB;
   - [x] Delete LoadBalancer
   - [x] Delete LoadBalancer V2
@@ -35,32 +36,44 @@ O repositório foi dividido em dois diretórios:
   - [x] List bucket
 
 <h4> 🐧 Shell Script</h4>
+
 - 📁 CloudWatch Logs;
+  - [x] Add tags
+
+- 📁 Elastic Compute Cloud - Amazon EC2; 
    - [x] Add tags
-<!-- - 📁 Elastic Compute Cloud - Amazon EC2; 
-   - [x] Create instance
-   - [x] Delete instance
-   - [x] Basic Commands
+   - [x] Instance Ids
+  
+- 📁 Key Management Serviceg - KMS;
+  - [x] Add tags
+ 
 - 📁 Elastic Load Balancing - ELB;
-  - [x] Delete LoadBalancer
-  - [x] Delete LoadBalancer V2
-- 📁 Simple Storage Service - S3
-  - [x] Delete bucket
-  - [x] List bucket🐧 -->
+  - [x] ELB Basic Commands
+  - [x] List ELB em uso
+  - [x] List ELB unSed
+  - [x] List Arn ELBs
 
-<h3> ☕ Usando as Lambdas Functions</h3>
+- 📁 Relational Database Service - RDS
+  - [x] Add tags cluster
+  - [x] Add tags db instance
+  - [x] Add tags add-tags-to-resource
 
-Para usar cada script siga estas etapas:
+- 📁 Target Group - tg
+  - [x] Check tg elb
+  - [x] Describe tg
 
- 1. Crie uma função lambda selecionando em <b>"Runtime"</b> qual versão de python você gostaria de usar - recomendo Python 3.9;
- 2. Em permissões crie uma new role com permissões básicas de Lambda - Por default sua Lambda function virá com permissões apenas para o CloudWatch;
- 3. Na aba <b>"Configuration"</b> escolha a opção <b>"Permissions"</b>, clique na role name criada.
- 4. Edite a Permission Policy na console do IAM adicionando as permissões necessárias conforme seu objetivo. Cada pasta desse projeto possui uma sugestão de IAM role;
- 5. Voltando ao painel da Lambda function cole na aba <b>Code</b> o código python disponibilizado no projeto;
- 6. Vai trabalhar com variáveis? Edite suas variáveis na aba <b>Configuration</b> opção <b>Environment variables</b>;
- 7. Ao terminar de editar seu código clique em deploy para finalizar;
- 8. Se você chegou nessa etapa você pode testar sua função Lambda clicando em <b>Test</b>;
- 9. Adicionalmente você pode conferir a execução da sua Lambda function pelos logs do CloudWatch.
+- 📁 Virtual private cloud - VPC
+  - [x] Add tags
+
+
+<h4> 🧪 De Brinde vocês ganham acesso ao laboratório de testes </h4>
+<h4> 📁 Testes</h4>
+<p>Este repo esta em constante mudança pois sempre estou testando novas features</p>
+
+  - [x] Add tags
+  - [x] Add tags - ResourceTagMappingList
+  - [x] Get all resources - ResourceTagMappingList
+  - [x] Get all resources in All Regions - ResourceTagMappingList
 
 
 <h3> 📫 Contribuindo para este projeto</h3>
