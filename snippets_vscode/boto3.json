@@ -1,0 +1,21 @@
+{
+    "boto3_basic": {
+        "prefix": "boto",
+        "body": [
+            "import boto3",
+            " ",
+            "regions = ['us-east-1', 'sa-east-1']",
+            " ",
+            "def lambda_handler(event, context):",
+            " ",
+            "	for region in regions:",
+            "		session = boto3.Session(profile_name='default',region_name=region)",
+            "		client = session.client('suaAPI')",
+            " ",
+            "		return none",
+            " ",
+            "if __name__ == '__main__': lambda_handler({},{})"
+        ],
+        "description": "Corpo de um script lambda com boto3"
+    }
+}

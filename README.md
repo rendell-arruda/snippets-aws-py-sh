@@ -75,6 +75,8 @@ O repositório foi dividido em dois diretórios:
   - [x] Get all resources - ResourceTagMappingList
   - [x] Get all resources in All Regions - ResourceTagMappingList
 
+<h4> 📁 Snippets para Vs Code</h4>
+<p>Template boto3</p>
 
 <h3> 📫 Contribuindo para este projeto</h3>
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
