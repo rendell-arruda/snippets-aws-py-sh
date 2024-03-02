@@ -23,6 +23,10 @@ O repositório foi dividido em dois diretórios:
    - [x] Volume instance Id
    - [x] Volume Status
 
+- 📁 Snapshots
+  - [x] Delete snapshot id
+  - [x] Delete snapshot 7days
+  
 - 📁 Elastic Compute Cloud - Amazon EC2; 
    - [x] Create instance
    - [x] Delete instance
@@ -30,10 +34,12 @@ O repositório foi dividido em dois diretórios:
   
 - 📁 Elastic Load Balancing - ELB;
   - [x] Delete LoadBalancer
-  - [x] Delete LoadBalancer V2
+  - [x] Delete LoadBalancer V2\
+  
 - 📁 Simple Storage Service - S3
   - [x] Delete bucket
   - [x] List bucket
+
 
 <h4> 🐧 Shell Script</h4>
 

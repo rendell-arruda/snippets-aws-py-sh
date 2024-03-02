@@ -1,3 +1,0 @@
-> 1 O script deleta um snapshot associado a uma ami?
-Não, ele não deleta um snapshot associado a uma ami. Ele deleta um snapshot associado a um volume.
-
