@@ -1,3 +1,0 @@
-ID da AMI,Nome,Descrição,Snapshot
-ami-0df18935bb9158ad4,ami2-teste,N/A,"[{'DeviceName': '/dev/xvda', 'Ebs': {'DeleteOnTermination': True, 'Iops': 3000, 'SnapshotId': 'snap-0acef3ffc54157c98', 'VolumeSize': 8, 'VolumeType': 'gp3', 'Throughput': 125, 'Encrypted': False}}]"
-ami-0de9eccaf92ae5aa4,ami_test_snapshot,ami_test_snapshot,"[{'DeviceName': '/dev/xvda', 'Ebs': {'DeleteOnTermination': True, 'Iops': 3000, 'SnapshotId': 'snap-0e7324777f6789ee0', 'VolumeSize': 8, 'VolumeType': 'gp3', 'Throughput': 125, 'Encrypted': False}}]"
