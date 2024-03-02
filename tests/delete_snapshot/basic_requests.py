@@ -1,51 +1,41 @@
-# import boto3
-
-
-# def listar_amis_sem_paginacao():
-#     # Crie um cliente EC2
-#     ec2_client = boto3.client("ec2")
-
-#     # Defina os filtros que deseja aplicar
-#     # filters = [Owners=['self']]
-
-#     # Faça uma chamada única para listar todas as AMIs sem usar paginador
-#     response = ec2_client.describe_images(Owners=["self"])
-
-#     # Itere sobre as AMIs na resposta
-#     for ami in response["Images"]:
-#         # Faça algo com a AMI, como imprimir o ID
-#         print(f"ID da AMI: {ami['ImageId']}")
-
-
-# # Chame a função para listar todas as AMIs próprias da conta sem paginar
-# listar_amis_sem_paginacao()
-
-
 import boto3
+from datetime import datetime, timedelta
 
 
-def listar_amis_com_paginacao():
-    # Crie um cliente EC2
-    ec2_client = boto3.client("ec2")
+def listar_snapshots_com_paginacao(regions):
+    # Itera sobre as regiões
+    for region in regions:
+        print(f"### {region} ###")
 
-    # Defina os filtros que deseja aplicar
-    # filters = [{"Name": "owner-id", "Values": ["self"]}]
+        # Cria uma sessão e um cliente para cada região
+        session = boto3.Session(profile_name="default")
+        ec2 = session.client("ec2", region_name=region)
 
-    # Use o paginador para lidar com a paginação
-    paginator = ec2_client.get_paginator("describe_images")
+        # Utiliza o paginador para listar todos os snapshots
+        paginator = ec2.get_paginator("describe_snapshots")
+        snapshots_iterator = paginator.paginate(OwnerIds=["self"])
 
-    # Ajuste o tamanho da página conforme necessário
-    page_iterator = paginator.paginate(
-        Owners=["self"], PaginationConfig={"PageSize": 1000}
-    )
+        # Itera sobre as páginas
+        for page in snapshots_iterator:
+            snapshots = page["Snapshots"]
 
-    # Itere sobre as páginas
-    for page in page_iterator:
-        # Itere sobre as AMIs na página atual
-        for ami in page["Images"]:
-            # Faça algo com a AMI, como imprimir o ID
-            print(f"ID da AMI: {ami['ImageId']}")
+            # TEST
+            for snapshot in snapshots:
+                print(snapshot["Description"])
+            # TEST
+
+            # Lista para armazenar os snapshots que podem ou não ser excluídos
+            snapshots_linked_ami = []
+            snapshots_can_delete = []
+
+            # Percore a lista de snapshots
+            # for snapshot in snapshots:
+            #     # Lista AMIs para verificar se há snapshots em uso por elas.
+            #     response = ec2.describe_images()
 
 
-# Chame a função para listar todas as AMIs próprias da conta com paginacao
-listar_amis_com_paginacao()
+# Lista de regiões
+regions = ["us-east-1", "sa-east-1"]
+
+# Chama a função para listar snapshots com paginação
+listar_snapshots_com_paginacao(regions)
