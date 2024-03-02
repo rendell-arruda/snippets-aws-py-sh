@@ -9,12 +9,12 @@
             "def lambda_handler(event, context):",
             " ",
             "	for region in regions:",
-            "		session = boto3.Session(profile_name='default',region_name=region)",
-            "		client = session.client('suaAPI')",
+            "		session = boto3.Session(profile_name='default')",
+            "		client = session.client('suaAPI',region_name=region)",
             " ",
             "		return none",
             " ",
-            "if __name__ == '__main__': lambda_handler({},{})"
+            "if __name__ == '__main__': lambda_handler({},{})",
         ],
         "description": "Corpo de um script lambda com boto3"
     }
