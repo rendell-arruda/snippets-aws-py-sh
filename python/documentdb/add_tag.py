@@ -52,20 +52,20 @@ def adicionar_tags_a_clusters(tags):
         print(cluster_arn)  # Imprime o ARN do cluster
         adicionar_tags_a_recurso(cluster_arn, tags)  # Adiciona as tags ao cluster
 
-        # Obtém as instâncias associadas ao cluster
-        response_instances = client_docdb.describe_db_instances(
-            Filters=[
-                {"Name": "db-cluster-id", "Values": [cluster["DBClusterIdentifier"]]}
-            ]
-        )
-        instances = response_instances[
-            "DBInstances"
-        ]  # Obtém a lista de instâncias associadas ao cluster
+        # # Obtém as instâncias associadas ao cluster
+        # response_instances = client_docdb.describe_db_instances(
+        #     Filters=[
+        #         {"Name": "db-cluster-id", "Values": [cluster["DBClusterIdentifier"]]}
+        #     ]
+        # )
+        # instances = response_instances[
+        #     "DBInstances"
+        # ]  # Obtém a lista de instâncias associadas ao cluster
 
-        # Itera sobre cada instância associada ao cluster
-        for instance in instances:
-            instance_arn = instance["DBInstanceArn"]  # Obtém o ARN da instância
-            adicionar_tags_a_recurso(instance_arn, tags)  # Adiciona as tags à instância
+        # # Itera sobre cada instância associada ao cluster
+        # for instance in instances:
+        #     instance_arn = instance["DBInstanceArn"]  # Obtém o ARN da instância
+        #     adicionar_tags_a_recurso(instance_arn, tags)  # Adiciona as tags à instância
 
 
 # Tags que você deseja adicionar a todos os clusters e instâncias
