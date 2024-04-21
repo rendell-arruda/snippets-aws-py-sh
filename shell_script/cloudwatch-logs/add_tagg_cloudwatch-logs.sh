@@ -11,7 +11,7 @@ if [ -f "$arquivo_grupos_logs" ]; then
 
     # Loop para adicionar as tags aos grupos de logs do CloudWatch
     while IFS= read -r nome_grupo_logs || [[ -n $nome_grupo_logs ]]; do
-        output=$(aws logs tag-log-group --log-group-name "$nome_grupo_logs" --tags Key=Key1,Value=value1 Key=Key2,Value=value2 2>&1)
+        output=$(aws logs tag-log-group --log-group-name "$nome_grupo_logs" --tags Produto=Key1,Subproduto=value1 2>&1)
 
         if [[ $? -eq 0 ]]; then
             echo "Tags adicionadas ao grupo de logs do CloudWatch: $nome_grupo_logs"
