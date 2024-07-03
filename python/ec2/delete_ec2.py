@@ -23,7 +23,10 @@ def deletar_lista_instancias_ec2(instance_ids):
 
 
 # Lista de IDs de instâncias EC2 que você deseja excluir
-instancia_ids_para_excluir = ["i-08769f011696dfb1f", "i-06f74f809c02d3835"]
+instancia_ids_para_excluir = [
+    "i-063555cf5fdccbb69",
+    "i-0f6e7eddbeca46db3",
+]
 
 # Chamando a função com a lista de IDs de instâncias EC2
 deletar_lista_instancias_ec2(instancia_ids_para_excluir)
