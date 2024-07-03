@@ -15,7 +15,7 @@ def get_instance_id_by_name(instance_name):
         )
         for reservation in response["Reservations"]:
             for instance in reservation["Instances"]:
-                print(f"*** o Id da instancia {instance_name} é {instance["InstanceId"]} ***")
+                print(f"*** o Id da instancia '{instance_name}' é {instance["InstanceId"]} ***")
                 return instance["InstanceId"]
         return None
     except Exception as e:
@@ -57,7 +57,7 @@ def change_instance_type(instance_name, new_instance_type):
         waiter.wait(InstanceIds=[instance_id])
         print(f"A instância {instance_id} ({instance_name}) está em execução.")
 
-        print(f"Tipo da instância {instance_name} alterado com sucesso!\n")
+        print(f"Tipo da instância '{instance_name}' alterado com sucesso!\n")
     except Exception as e:
         print(f"Ocorreu um erro ao alterar o tipo da instância {instance_name}: {e}")
 
